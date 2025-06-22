@@ -1,0 +1,48 @@
+/* Base styles for the map container */
+.map-container {
+  height: 700px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Location list styles */
+.location-list {
+  height: 700px;
+  overflow-y: auto;
+  padding: 1.5rem;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
+  .map-container,
+  .location-list {
+    height: 500px;
+  }
+  
+  .location-list {
+    margin-top: 1.5rem;
+  }
+}
+
+/* Custom scrollbar for location list */
+.location-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.location-list::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.location-list::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+.location-list::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
