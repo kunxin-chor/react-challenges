@@ -1,0 +1,169 @@
+/* Game Header */
+.game-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.game-header h1 {
+  margin: 0 0 0.5rem 0;
+  color: #333;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.turn-counter {
+  position: absolute;
+  top: 0;
+  right: 1rem;
+  background-color: #f5f5f5;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: bold;
+  color: #666;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Dice Styles */
+.dice-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+}
+
+.dice-wrapper {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.dice-wrapper:hover {
+  transform: translateY(-5px);
+}
+
+.dice {
+  width: 60px;
+  height: 60px;
+  background-color: #fff;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.dice-scored {
+  background-color: #4CAF50;
+  color: white;
+  transform: scale(0.9);
+  box-shadow: 0 0 10px rgba(76, 175, 80, 0.5);
+}
+
+.dice-scored::after {
+  content: '✓';
+  position: absolute;
+  top: -5px;
+  right: 5px;
+  font-size: 1rem;
+  color: white;
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Player Score Styles */
+.players-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.player-score {
+  padding: 1.5rem;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  text-align: center;
+  min-width: 150px;
+  transition: all 0.3s ease;
+}
+
+.player-score.current-player {
+  border-color: #4CAF50;
+  box-shadow: 0 0 10px rgba(76, 175, 80, 0.5);
+  background-color: rgba(76, 175, 80, 0.1);
+  transform: scale(1.05);
+}
+
+.player-score h3 {
+  margin: 0 0 0.5rem 0;
+  color: #333;
+}
+
+.player-score .score {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #2196F3;
+}
+
+/* Game Controls */
+.game-controls {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.2s ease;
+}
+
+.roll-btn {
+  background-color: #2196F3;
+  color: white;
+}
+
+.roll-btn:hover {
+  background-color: #1976D2;
+  transform: translateY(-2px);
+}
+
+.bank-btn {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.bank-btn:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.bank-btn:not(:disabled):hover {
+  background-color: #388E3C;
+  transform: translateY(-2px);
+}
+
+/* Turn Points */
+.turn-points {
+  text-align: center;
+  margin: 1.5rem 0;
+}
+
+.turn-points h3 {
+  margin: 0;
+  color: #666;
+  font-size: 1.25rem;
+}
